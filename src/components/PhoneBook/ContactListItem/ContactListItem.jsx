@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { Container } from './ContactListItem.styled';
 
-const ContactListItem = ({ contact, handleDelete }) => {
+const ContactListItem = ({ contact, onDeleteContact }) => {
   return (
     <Container>
       <p>
         {contact.name}:<span>{contact.number}</span>
       </p>
-      <button type="button" onClick={() => handleDelete(contact.id)}>
+      <button type="button" onClick={() => onDeleteContact(contact.id)}>
         Delete
       </button>
     </Container>
@@ -24,5 +24,5 @@ ContactListItem.prototype = {
       number: PropTypes.string.isRequired,
     })
   ),
-  handleDelete: PropTypes.func.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };

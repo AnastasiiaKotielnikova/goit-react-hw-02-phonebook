@@ -18,7 +18,7 @@ export const Container = styled.div`
     border-left: 0;
     border-right: 0;
     border-width: 3px;
-    border-image: linear-gradient(to right, red, blue);
+    border-image: linear-gradient(to right, #818588, #22bbe6);
     border-image-slice: 1;
     background: transparent;
   }

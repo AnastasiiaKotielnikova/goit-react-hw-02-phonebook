@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { Container, Title, SubTitle } from './App.styled';
 import ContactForm from 'components/ContactForm';
@@ -58,13 +58,14 @@ class App extends Component {
         <Title>Phonebook</Title>
         <ContactForm addContact={this.handleAddContact} />
         <SubTitle>Contacts:</SubTitle>
-        <Filter value={this.state.filter} onChange={this.handleFilterInput} />
+        <Filter text={this.state.filter} onInput={this.handleFilterInput} />
         <PhoneBook
           contacts={filteredContacts}
-          handleDelete={this.handleDeleteContact}
+          onDeleteContact={this.handleDeleteContact}
         />
       </Container>
     );
   }
 }
+
 export default App;

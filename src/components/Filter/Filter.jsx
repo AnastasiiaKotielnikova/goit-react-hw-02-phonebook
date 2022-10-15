@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { Container } from './Filter.styled';
 
-const Filter = ({ value, onChange }) => {
+const Filter = ({ text, onInput }) => {
   return (
     <Container>
       <label>
         Find contacts by name
-        <input type="text" name="filter" value={value} onChange={onChange} />
+        <input type="text" value={text} onChange={onInput} />
       </label>
     </Container>
   );
@@ -15,6 +15,6 @@ const Filter = ({ value, onChange }) => {
 export default Filter;
 
 Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  text: PropTypes.string,
+  onInput: PropTypes.func.isRequired,
 };

@@ -15,12 +15,8 @@ export const Container = styled.li`
     border-radius: 4px;
     border-style: none;
     color: #ffffff;
-    background: #355c7d;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #c06c84, #6c5b7b, #355c7d);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #818588;
+    background: linear-gradient(to right, #818588, #81bdd3, #22bbe6);
     &:hover,
     &:focus {
       transform: scale(1.1);

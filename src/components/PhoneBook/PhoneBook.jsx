@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import ContactListItem from './ContactListItem';
 import { Container, ContactList } from './PhoneBook.styled';
 
-const PhoneBook = ({ contacts, handleDelete }) => {
+const PhoneBook = ({ contacts, onDeleteContact }) => {
   return (
     <Container>
       <ContactList>
@@ -10,7 +10,7 @@ const PhoneBook = ({ contacts, handleDelete }) => {
           <ContactListItem
             key={contact.id}
             contact={contact}
-            handleDelete={handleDelete}
+            onDeleteContact={onDeleteContact}
           />
         ))}
       </ContactList>
@@ -24,6 +24,6 @@ PhoneBook.prototype = {
       id: PropTypes.string.isRequired,
     })
   ),
-  handleDelete: PropTypes.func.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
 export default PhoneBook;

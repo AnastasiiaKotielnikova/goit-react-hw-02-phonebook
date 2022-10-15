@@ -1,7 +1,13 @@
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
 import PropTypes from 'prop-types';
-import { Form, ValidationError } from './ContactForm.styled';
+import {
+  InputItem,
+  Input,
+  InputLabel,
+  SubmitBtn,
+  ValidationError,
+} from './ContactForm.styled';
 
 const schema = yup.object().shape({
   name: yup
@@ -44,21 +50,17 @@ const ContactForm = ({ addContact }) => {
       onSubmit={handleSubmit}
     >
       <Form>
-        <div>
-          <label>
-            Name
-            <input type="text" name="name" />
-            <ValidationError component="span" name="name" />
-          </label>
-        </div>
-        <div>
-          <label>
-            Phone number
-            <input type="tel" name="number" />
-            <ValidationError component="span" name="number" />
-          </label>
-        </div>
-        <button type="submit">Add contact</button>
+        <InputItem>
+          <InputLabel>Name:</InputLabel>
+          <Input type="text" name="name" />
+          <ValidationError component="span" name="name" />
+        </InputItem>
+        <InputItem>
+          <InputLabel>Number:</InputLabel>
+          <Input type="tel" name="number" />
+          <ValidationError component="span" name="number" />
+        </InputItem>
+        <SubmitBtn type="submit">Add contact</SubmitBtn>
       </Form>
     </Formik>
   );
