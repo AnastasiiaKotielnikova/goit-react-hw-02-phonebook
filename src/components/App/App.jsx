@@ -18,7 +18,7 @@ class App extends Component {
 
   handleAddContact = newContact => {
     if (this.state.contacts.some(({ name }) => name === newContact.name)) {
-      alert(`${newContact.name} is alredy in contacts`);
+      alert(`${newContact.name} is already in contacts`);
 
       return;
     }
